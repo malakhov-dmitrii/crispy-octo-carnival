@@ -1,10 +1,11 @@
 {
-  "name": "@fit/b2c-lk",
-  "version": "0.1.1",
+  "name": "@fit/b2b-lk",
+  "version": "0.1.0",
   "private": true,
   "publishConfig": {
     "registry": "https://npm.fabit.ru"
   },
+  "homepage": "https://test.parkingtest.ru/legalcabinet",
   "proxy": "https://parkingqa2.fitdev.ru",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

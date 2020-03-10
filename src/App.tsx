@@ -28,7 +28,7 @@ const App: FC = () => {
 
   return (
     <>
-      <Router>
+      <Router basename={process.env.SUB_DOMAIN_URL}>
         <div className={styles.FlexColumn}>
           <div>
             <Header />
