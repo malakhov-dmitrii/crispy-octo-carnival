@@ -1,0 +1,26 @@
+@import './variables';
+
+.HasError {
+  :global {
+    svg,
+    .ant-select-selection,
+    .ant-select-selection__placeholder,
+    .ant-input {
+      color: $colorError;
+
+      &:focus {
+        border-color: $colorError;
+        -webkit-box-shadow: 0 0 2px 0 $colorError;
+        box-shadow: 0 0 2px 0 $colorError;
+      }
+
+      &:hover {
+        border-color: $colorError !important;
+      }
+
+      &::placeholder {
+        color: $colorError;
+      }
+    }
+  }
+}

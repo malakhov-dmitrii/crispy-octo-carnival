@@ -1,0 +1,27 @@
+@import "../../../../shared/styles/variables";
+
+:export {
+  green: $green;
+}
+
+.Body {
+  .Wrap {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  
+  .Select {
+    :global {
+      .ant-select-selection-selected-value {
+        display: flex !important;
+        align-items: center;
+      }
+    }
+  }
+  
+  .Span {
+    color: $gray !important;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

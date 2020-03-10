@@ -1,0 +1,8 @@
+@import '../../../../../../styles/shared';
+@import '../../../../../../styles/variables';
+
+.MailWindow {
+  .Error {
+    color: $colorError !important;
+  }
+}

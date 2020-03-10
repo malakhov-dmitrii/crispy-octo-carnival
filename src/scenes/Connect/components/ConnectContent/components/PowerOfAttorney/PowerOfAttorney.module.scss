@@ -1,0 +1,40 @@
+@import '../../../../../../shared/styles/variables';
+
+:export {
+  green: $green;
+}
+
+.SubTitle {
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 35px;
+}
+
+.Dragger {
+  padding: 35px 0;
+
+  p {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.Input {
+  height: 40px;
+}
+
+.EmailInfo {
+  font-size: 12px;
+}
+
+.Buttons {
+  margin-top: 60px;
+
+  button {
+    margin-left: 10px;
+
+    span {
+      color: inherit
+    }
+  }
+}

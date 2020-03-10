@@ -1,0 +1,22 @@
+@import "../../shared/styles/variables";
+
+.Button {
+  display: flex;
+  align-items: center;
+  width: 195px;
+  height: 40px;
+}
+
+.ButtonIcon {
+  margin-right: 8px;
+}
+
+.FlexGrowOne {
+  flex-grow: 1;
+}
+
+@media all and (max-width: 652px) {
+  .FlexGrowOne{
+    flex-grow: 0;
+  }
+}

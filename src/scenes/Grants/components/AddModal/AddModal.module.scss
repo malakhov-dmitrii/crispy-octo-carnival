@@ -1,0 +1,11 @@
+.AddModal {
+  :global {
+    .ant-modal-footer {
+      text-align: left;
+    }
+    .ant-modal-body{
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+}

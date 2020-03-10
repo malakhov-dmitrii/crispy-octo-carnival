@@ -1,0 +1,11 @@
+.Card {
+  max-width: 1136px;
+  margin: 25px auto;
+
+  :global {
+    .ant-card-body {
+      padding: 0;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../shared/styles/variables';
+
+.Welcome {
+  a {
+    color: $green;
+  }
+  p {
+    color: $gray;
+  }
+}
+
+.Root {
+  display: flex;
+  justify-content: center;
+}
+
+.Card {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1136px;
+}

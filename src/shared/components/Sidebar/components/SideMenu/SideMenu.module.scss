@@ -1,0 +1,21 @@
+@import "../../../../styles/variables";
+
+.Menu {
+  border: none;
+  .MenuItem {
+    width: 208px;
+
+    .Active {
+      color: $green
+    }
+
+    .Link {
+      display: flex;
+      align-items: center;
+
+      .Icon {
+        margin-right: 10px;
+      }
+    }
+  }
+}

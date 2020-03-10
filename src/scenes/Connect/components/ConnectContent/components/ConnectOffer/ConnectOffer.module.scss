@@ -1,0 +1,18 @@
+@import '../../../../../../shared/styles/variables';
+
+:export {
+  green: $green;
+}
+
+.SubTitle {
+  color: $gray;
+  font-size: 16px;
+}
+
+.Buttons {
+  margin-top: 25px;
+
+  button {
+    margin-left: 10px;
+  }
+}
