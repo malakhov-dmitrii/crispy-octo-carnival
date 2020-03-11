@@ -46,7 +46,7 @@ const columns = [
     key: 'amount',
     render: (completed: boolean, record: Receipt) => (
       <NumberFormat
-        value={record?.sum.toFixed(2)}
+        value={(record?.sum / 100).toFixed(2)}
         displayType={'text'}
         thousandSeparator={' '}
         decimalScale={2}
