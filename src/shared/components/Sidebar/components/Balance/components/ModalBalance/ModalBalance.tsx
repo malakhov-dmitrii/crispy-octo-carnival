@@ -40,7 +40,7 @@ const ModalBalance: FC<ModalBalance> = ({ isOpen, setOpen }) => {
     return errors;
   };
   const onSubmit = (values: any, { resetForm }: any) => {
-    const {sum} = values; 
+    const { sum } = values;
     dispatch({
       type: ReceiptsActions.CreateReceipts,
       payload: {
