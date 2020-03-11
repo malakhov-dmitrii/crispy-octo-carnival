@@ -20,7 +20,7 @@ import { getParkings$, createParking$, stopParking$, checkCostParking$ } from '.
 import { getGrants$ } from './Grants/grants.effect';
 import { getBalance$ } from './Balance/balance.effect';
 import { getAbonements$ } from './Abonements/abonements.effect';
-import { getLegalEntities$, updateLegalEntities$ } from './LegalEntities/legalEntities.effect';
+import { getLegalEntities$, updateLegalEntities$, createChiefRequest$ } from './LegalEntities/legalEntities.effect';
 import { getReceipts$, createReceipts$, downloadReceipts$, sendInvoiceReceipts$ } from './Receipts/receipts.effect';
 import { getConfig$ } from './Config/config.effect';
 import { getFromOneTimeToken$, getActiveOrganizationAccessToken$ } from './Config/config.effect';
@@ -89,6 +89,7 @@ observableMiddleware.run(
     getConfig$,
     createCheck$,
     updateLegalEntities$,
+    createChiefRequest$,
     pushNotification$,
     shiftNotification$,
   ),
