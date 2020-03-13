@@ -13,6 +13,13 @@ import { ConfigActions } from './store/Config/config.actions';
 import { useLocalAuth } from './shared/utils';
 import Notification from './shared/components/Notification';
 
+export const env =
+  process.env.NODE_ENV === 'production'
+    ? // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      // @ts-ignore
+      window[process.env.REACT_APP_INSTANCE_CONFIG_PROPS_KEY]
+    : process.env;
+
 const App: FC = () => {
   const dispatch = useDispatch();
   const localAuth = useLocalAuth();
@@ -28,7 +35,7 @@ const App: FC = () => {
 
   return (
     <>
-      <Router basename="/legalcabinet">
+      <Router basename={env.REACT_APP_SUB_DOMAIN_URL}>
         <div className={styles.FlexColumn}>
           <div>
             <Header />

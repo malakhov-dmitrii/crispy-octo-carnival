@@ -16,8 +16,8 @@ const WithBarrierParkingForm: FC = () => {
   const { isLoading } = useSelector((state: Store) => state.parkings);
   // const cost = useSelector((state: Store) => state.parkings.data.cost);
 
-  const handlerSubmit = (values: any) => {
-    console.log('values', values);
+  const handlerSubmit = () => {
+    // console.log('values', values);
   };
 
   const formik = useFormik({
