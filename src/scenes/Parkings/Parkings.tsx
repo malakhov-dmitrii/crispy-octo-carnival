@@ -11,8 +11,6 @@ const Parkings = () => {
   const dispatch = useDispatch();
   const { activeOrganizationId } = useSelector((state: Store) => state.config);
 
-  const { items } = useSelector((state: Store) => state.zones.data);
-
   useEffect(() => {
     if (activeOrganizationId) {
       dispatch({ type: ParkingsActions.GetParkings });
@@ -23,7 +21,7 @@ const Parkings = () => {
   return (
     <>
       <Title>Парковки</Title>
-      <ParkingForm zones={items} />
+      <ParkingForm />
 
       <DataTable />
     </>
