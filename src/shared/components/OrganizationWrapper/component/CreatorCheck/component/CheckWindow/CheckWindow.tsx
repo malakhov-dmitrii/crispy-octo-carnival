@@ -53,7 +53,7 @@ const CheckWindow: FC<CheckWindow> = ({
       <p>
         {`№ ${_id} от ${createDate.split('T')[0]}		Пополнение баланса		`}
         <NumberFormat
-          value={sum.toFixed(2)}
+          value={(sum / 100).toFixed(2)}
           displayType={'text'}
           thousandSeparator={' '}
           decimalScale={2}

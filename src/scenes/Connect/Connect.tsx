@@ -35,7 +35,7 @@ const Connect: FC = () => {
 
   return (
     <div className={styles.Root}>
-      <Card className={styles.Card}>
+      <Card className={styles.Card} bordered={false}>
         {!!legalEntity && <ConnectContent organization={legalEntity} role={params.role} />}
       </Card>
     </div>

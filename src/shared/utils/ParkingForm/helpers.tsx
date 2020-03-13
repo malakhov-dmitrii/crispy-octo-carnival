@@ -24,7 +24,7 @@ export const durations = [
   { label: '05 ч 00 мин', value: '300' },
 ];
 
-export const initialValues: ParkingState = {
+export const streetParkingInitialValues: ParkingState = {
   vrp: '',
   zoneNumber: '',
   duration: '',
@@ -32,13 +32,25 @@ export const initialValues: ParkingState = {
   vrpFormat: 'local',
 };
 
-interface ValidationSchemaOptions {
+export const withBarrierParkingInitialValues: WithBarrierParkingValidationSchemaOptions = {
+  ticket: '',
+};
+
+interface StreetParkingValidationSchemaOptions {
   vrpIsLocal: boolean;
   vehicleType: keyof VrpRegexpsLocal;
   config: Config;
 }
 
-export const getValidationSchema = ({ vrpIsLocal, vehicleType, config }: ValidationSchemaOptions) => {
+interface WithBarrierParkingValidationSchemaOptions {
+  ticket: string;
+}
+
+export const getStreetParkingValidationSchema = ({
+  vrpIsLocal,
+  vehicleType,
+  config,
+}: StreetParkingValidationSchemaOptions) => {
   const vrpRegexps: VrpRegexpsOptions = vrpIsLocal ? config.vrpRegexps.foreign : config.vrpRegexps.local[vehicleType];
   const regex = new RegExp(vrpRegexps.pattern, vrpRegexps.flags);
 
@@ -54,3 +66,7 @@ export const getValidationSchema = ({ vrpIsLocal, vehicleType, config }: Validat
     vrpFormat: yup.string().required(),
   });
 };
+
+export const withBarrierParkingValidationSchema = yup.object().shape({
+  ticket: yup.string().required(),
+});

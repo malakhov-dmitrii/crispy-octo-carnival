@@ -18,8 +18,8 @@ const validationSchema = yup.object().shape({
     .required('Выберите email'),
   powerOfAttorneyFile: yup
     .mixed()
-    .test('name', 'Выберите файл', value => value.name)
-    .test('type', 'Не корректное расширение файла', value => mimeTypes.includes(value.type)),
+    .test('name', 'Выберите файл', value => value?.name)
+    .test('type', 'Не корректное расширение файла', value => mimeTypes.includes(value?.type)),
 });
 
 interface PowerOfAttorney {
