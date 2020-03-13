@@ -9,6 +9,7 @@ import CompanySelect from './components/CompanySelect';
 import { Card } from 'antd';
 import { Link } from 'react-router-dom';
 import { useLocalAuth } from '../../shared/utils';
+import { env } from '../../App';
 
 const Auth = () => {
   const history = useHistory();
@@ -19,7 +20,7 @@ const Auth = () => {
     if (localAuth) {
       dispatch({ type: LegalEntitiesActions.GetLegalEntities });
     } else if (!history.location.search) {
-      document.location.href = `${process.env.REACT_APP_LOGIN_URL}?returnUrl=${process.env.REACT_APP_HOST_NAME}`;
+      document.location.href = `${env.REACT_APP_LOGIN_URL}?returnUrl=${env.REACT_APP_HOST_NAME}`;
     } else {
       const token = history.location.search.split('=')[1];
       dispatch({ type: ConfigActions.GetFromOneTimeToken, payload: token });

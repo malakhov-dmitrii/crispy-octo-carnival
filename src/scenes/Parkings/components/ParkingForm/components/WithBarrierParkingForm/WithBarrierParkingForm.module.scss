@@ -1,0 +1,41 @@
+@import "../../../../../../shared/styles/variables";
+
+:export {
+  green: $green;
+}
+
+.Select {
+  :global {
+    .ant-select-selection__rendered, ant-select-selection-selected-value {
+      display: flex !important;
+      align-items: center;
+    }
+  }
+}
+
+.FormRow {
+  width: 100%;
+}
+
+.ConfirmRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+
+  .ButtonBlock {
+    display: flex;
+    align-items: center;
+  }
+
+  .Sum {
+    margin-right: 10px;
+    font-size: 22px;
+  }
+
+  .ConfirmButton {
+    font-size: 16px;
+    height: 40px;
+    width: 120px;
+  }
+}

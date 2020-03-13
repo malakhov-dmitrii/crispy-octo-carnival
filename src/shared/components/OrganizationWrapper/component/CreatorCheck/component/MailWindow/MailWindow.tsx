@@ -58,7 +58,13 @@ const MailWindow: FC<MailWindow> = ({ isOpenWindowMail, setOpenWindowMail, _id =
     <div className={cn({ [styles.HasError]: errors.email }, styles.MailWindow)}>
       <p>
         {`№ ${_id} от ${createDate.split('T')[0]}		Пополнение баланса		`}
-        <NumberFormat value={sum} displayType={'text'} thousandSeparator={' '} suffix={' ₽'} />
+        <NumberFormat
+          value={(sum / 100).toFixed(2)}
+          displayType={'text'}
+          thousandSeparator={' '}
+          decimalScale={2}
+          suffix={' ₽'}
+        />
       </p>
       <FormRowItem label="Email" error={errors.email}>
         <Input type="text" name="email" onChange={handleChange} value={values.email} />
