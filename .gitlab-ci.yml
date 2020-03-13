@@ -9,6 +9,8 @@ image: node:13
 install:all:
   only:
     - /^release\/.*$/
+    - feature/configure_docker_service_via_env/38144
+
   stage: install
   script:
   - yarn global add node-gyp
@@ -21,6 +23,7 @@ install:all:
 build:all:
   only:
     - /^release\/.*$/
+    - feature/configure_docker_service_via_env/38144
   stage: build
   script:
   - NODE_ENV=production yarn build
@@ -47,6 +50,7 @@ deploy:docker:
         - docker push $PARKING_DOCKER_REGISTRY_URL/$CI_PROJECT_NAMESPACE/${IMAGE_NAME}:$APP_VERSION
     only:
     - /^release\/.*$/
+    - feature/configure_docker_service_via_env/38144
 
 
 publish:test:
