@@ -35,7 +35,7 @@ const App: FC = () => {
 
   return (
     <>
-      <Router basename={env.REACT_APP_SUB_DOMAIN_URL}>
+      <Router basename="/legalcabinet">
         <div className={styles.FlexColumn}>
           <div>
             <Header />
