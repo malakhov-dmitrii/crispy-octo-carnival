@@ -4,13 +4,14 @@ import { Menu } from 'antd';
 import routes from '../../../../../routes';
 import { Link } from 'react-router-dom';
 import { useRouteMatch } from 'react-router';
-import { Abonement, Check, History, Parkings } from '../../../../Icons/NavSvg';
+import { Abonement, Check, History, Parkings, Reconciliation } from '../../../../Icons/NavSvg';
 
 const icons: any = {
   parkings: Parkings,
   history: History,
   abonement: Abonement,
   check: Check,
+  reconciliation: Reconciliation,
 };
 
 const SideMenu = () => {

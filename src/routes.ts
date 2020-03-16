@@ -6,6 +6,7 @@ import Checks from './scenes/Checks';
 import Auth from './scenes/Auth';
 import Profile from './scenes/Profile';
 import Connect from './scenes/Connect';
+import Reconciliation from './scenes/Reconciliation';
 
 interface Route {
   id: number;
@@ -63,6 +64,14 @@ const routes: Route[] = [
   //   children: Transports,
   //   useWith: ['organization', 'sidebar', 'header'],
   // },
+  {
+    id: 10,
+    path: 'reconciliation',
+    title: 'Сверка расчетов',
+    children: Reconciliation,
+    useWith: ['organization', 'sidebar', 'header'],
+    icon: 'reconciliation',
+  },
   {
     id: 12,
     path: 'profile',
