@@ -1,4 +1,4 @@
-// import Transports from './scenes/Transports';
+import Transports from './scenes/Transports';
 import Parkings from './scenes/Parkings';
 import History from './scenes/History';
 import Grants from './scenes/Grants';
@@ -57,13 +57,13 @@ const routes: Route[] = [
     useWith: ['organization', 'header', 'sidebar'],
     icon: 'check',
   },
-  // {
-  //   id: 9,
-  //   path: 'transports',
-  //   title: 'Транспорт',
-  //   children: Transports,
-  //   useWith: ['organization', 'sidebar', 'header'],
-  // },
+  {
+    id: 9,
+    path: 'transports',
+    title: 'Транспорт',
+    children: Transports,
+    useWith: ['organization', 'sidebar', 'header'],
+  },
   {
     id: 10,
     path: 'reconciliation',
