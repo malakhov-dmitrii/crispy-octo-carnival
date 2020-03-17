@@ -9,6 +9,7 @@ image: node:13
 install:all:
   only:
     - /^release\/.*$/
+
   stage: install
   script:
   - yarn global add node-gyp
