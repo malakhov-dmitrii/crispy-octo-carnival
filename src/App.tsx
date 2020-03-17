@@ -17,7 +17,7 @@ export const env =
   process.env.NODE_ENV === 'production'
     ? // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
       // @ts-ignore
-      window[process.env.REACT_APP_INSTANCE_CONFIG_PROPS_KEY]
+      window["__INSTANCE_ENV_PROPS__"]
     : process.env;
 
 const App: FC = () => {

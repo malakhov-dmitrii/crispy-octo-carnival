@@ -1,4 +1,4 @@
-// import Transports from './scenes/Transports';
+import Transports from './scenes/Transports';
 import Parkings from './scenes/Parkings';
 import History from './scenes/History';
 import Grants from './scenes/Grants';
@@ -6,6 +6,7 @@ import Checks from './scenes/Checks';
 import Auth from './scenes/Auth';
 import Profile from './scenes/Profile';
 import Connect from './scenes/Connect';
+import Reconciliation from './scenes/Reconciliation';
 
 interface Route {
   id: number;
@@ -56,13 +57,21 @@ const routes: Route[] = [
     useWith: ['organization', 'header', 'sidebar'],
     icon: 'check',
   },
-  // {
-  //   id: 9,
-  //   path: 'transports',
-  //   title: 'Транспорт',
-  //   children: Transports,
-  //   useWith: ['organization', 'sidebar', 'header'],
-  // },
+  {
+    id: 9,
+    path: 'transports',
+    title: 'Транспорт',
+    children: Transports,
+    useWith: ['organization', 'sidebar', 'header'],
+  },
+  {
+    id: 10,
+    path: 'reconciliation',
+    title: 'Сверка расчетов',
+    children: Reconciliation,
+    useWith: ['organization', 'sidebar', 'header'],
+    icon: 'reconciliation',
+  },
   {
     id: 12,
     path: 'profile',
