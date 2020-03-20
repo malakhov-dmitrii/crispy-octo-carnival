@@ -1,0 +1,13 @@
+.ListHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 100%;
+
+  .ListTitle {
+    width: auto;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+}

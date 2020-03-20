@@ -1,0 +1,41 @@
+.WindowBody {
+  position: relative;
+}
+
+.FlexCenter {
+  display: flex;
+  align-items: center;
+}
+
+.NumberCar {
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.Label {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.PriceBlock {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  padding: 5px 16px;
+  background: #FAFAFA;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.PriceRow {
+  padding: 10px 0;
+}
+
+.InitialPrice {
+  display: flex;
+  text-decoration-line: line-through;
+  color: rgba(0, 0, 0, 0.45);
+  margin-right: 10px;
+}
