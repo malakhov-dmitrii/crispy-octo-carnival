@@ -17,6 +17,7 @@ import {
   Truck,
   Bus,
   Close,
+  Box,
   Reconciliation,
 } from './NavSvg';
 
@@ -39,5 +40,6 @@ export {
   Truck,
   Bus,
   Close,
+  Box,
   Reconciliation,
 };

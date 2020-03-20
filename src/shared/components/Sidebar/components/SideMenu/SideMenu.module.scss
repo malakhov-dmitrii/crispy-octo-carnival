@@ -2,8 +2,10 @@
 
 .Menu {
   border: none;
+
   .MenuItem {
     width: 208px;
+    height: auto;
 
     .Active {
       color: $green
@@ -12,6 +14,13 @@
     .Link {
       display: flex;
       align-items: center;
+
+      .LinkTitle {
+        white-space: pre-line;
+        line-height: 22px;
+        padding: 10px 0;
+        width: 130px;
+      }
 
       .Icon {
         margin-right: 10px;

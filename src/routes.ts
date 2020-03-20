@@ -6,6 +6,7 @@ import Checks from './scenes/Checks';
 import Auth from './scenes/Auth';
 import Profile from './scenes/Profile';
 import Connect from './scenes/Connect';
+import PenaltiesAndEvacuations from './scenes/PenaltiesAndEvacuations';
 import Reconciliation from './scenes/Reconciliation';
 
 interface Route {
@@ -85,6 +86,14 @@ const routes: Route[] = [
     title: 'Парковки',
     children: Connect,
     useWith: ['organization'],
+  },
+  {
+    id: 14,
+    path: 'penalties-and-evacuations',
+    title: 'Штрафы и эвакуации',
+    children: PenaltiesAndEvacuations,
+    useWith: ['organization', 'sidebar', 'header'],
+    icon: 'box',
   },
 ];
 
