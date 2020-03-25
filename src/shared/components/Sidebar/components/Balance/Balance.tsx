@@ -25,7 +25,7 @@ const Balance = () => {
       <p className={styles.BalanceTitle}>Баланс</p>
       <p className={styles.BalanceAmount}>
         {(balance / 100).toFixed(2)}
-        <b className={styles.RubleSign}>₽</b>
+        <span className={styles.RubleSign}>₽</span>
       </p>
       <Button type="primary" className={styles.Button} onClick={() => setOpen(true)}>
         <ButtonPlus size={16} fill="white" opacity={1} className={styles.ButtonIcon} />

@@ -1,75 +1,105 @@
 import { handleActions } from 'redux-actions';
 import { HistoryActions } from './history.actions';
 
-export interface History {
-  /**
-   * Все операции
-   *
-   * @type {Payment[]}
-   * @memberof History
-   */
-  items: Payment[];
-  /** Общее число записей */
-  total: number;
-}
-
-export interface Payment {
-  /** ID записи */
-  id: number;
-  /** ID пользователя */
-  accountId: number;
-  /** Тип записи */
-  type: string;
-  /** Сумма */
-  sum: number;
-  /** DISPLYAED Дата записи */
-  date: number;
-  /** Назначение платежа */
-  purpose: string;
-  /** Номер зоны */
-  zoneNumber?: string | null;
-  /** Рег. номер автомобиля */
-  vrp?: string | null;
-  /** Местный/инстранный номер */
-  vrpFormat?: string | null;
-  /** Тип ТС - авто/грузовик/автобус */
-  vehicleType?: string | null;
-  /** - */
-  serviceId?: string | null;
-  /** - */
-  sourceId?: any | null;
-  /** ID бронирования */
-  reservationId?: number | null;
-  /** Timestamp начала бронирования */
-  reservationStart?: number | null;
-  /** Timestamp окончания бронирования */
-  reservationEnd?: number | null;
-  /** - */
-  renewId?: any | null;
-  /** Отмена */
-  cancelled?: boolean | null;
-  /** - */
-  sourceValue?: any | null;
-  /** - */
-  gatedParkingNumber?: any | null;
-  /** - */
-  gatedParkingSessionStart?: any | null;
-  /** - */
-  gatedParkingSessionDepartureDate?: any | null;
-  /** - */
-  benefits: any[];
-  /** - */
-  accountTransfer?: any | null;
-  /** - */
-  refundedPaymentDate?: any | null;
-  /** Назначение платежа */
-  purposeTitle: PurposeTitle;
-}
-
-interface PurposeTitle {
+export interface PurposeTitle {
   ru: string;
   en: string;
 }
+
+export interface Payment {
+  _id: number;
+  accountId: number;
+  type: string;
+  sum: number;
+  date: string;
+  purpose: string;
+  zoneNumber: string;
+  vrp: string;
+  vrpFormat: string;
+  vehicleType: string;
+  reservationId: number;
+  reservationStart: string;
+  reservationEnd: string;
+  cancelled: boolean;
+  benefits: any[];
+  ended: boolean;
+  purposeTitle: PurposeTitle;
+}
+
+export interface History {
+  items: Payment[];
+  total: number;
+}
+
+// export interface History {
+//   /**
+//    * Все операции
+//    *
+//    * @type {Payment[]}
+//    * @memberof History
+//    */
+//   items: Payment[];
+//   /** Общее число записей */
+//   total: number;
+// }
+
+// export interface Payment {
+//   /** ID записи */
+//   id: number;
+//   /** ID пользователя */
+//   accountId: number;
+//   /** Тип записи */
+//   type: string;
+//   /** Сумма */
+//   sum: number;
+//   /** DISPLYAED Дата записи */
+//   date: number;
+//   /** Назначение платежа */
+//   purpose: string;
+//   /** Номер зоны */
+//   zoneNumber?: string | null;
+//   /** Рег. номер автомобиля */
+//   vrp?: string | null;
+//   /** Местный/инстранный номер */
+//   vrpFormat?: string | null;
+//   /** Тип ТС - авто/грузовик/автобус */
+//   vehicleType?: string | null;
+//   /** - */
+//   serviceId?: string | null;
+//   /** - */
+//   sourceId?: any | null;
+//   /** ID бронирования */
+//   reservationId?: number | null;
+//   /** Timestamp начала бронирования */
+//   reservationStart?: number | null;
+//   /** Timestamp окончания бронирования */
+//   reservationEnd?: number | null;
+//   /** - */
+//   renewId?: any | null;
+//   /** Отмена */
+//   cancelled?: boolean | null;
+//   /** - */
+//   sourceValue?: any | null;
+//   /** - */
+//   gatedParkingNumber?: any | null;
+//   /** - */
+//   gatedParkingSessionStart?: any | null;
+//   /** - */
+//   gatedParkingSessionDepartureDate?: any | null;
+//   /** - */
+//   benefits: any[];
+//   /** - */
+//   accountTransfer?: any | null;
+//   /** - */
+//   refundedPaymentDate?: any | null;
+//   /** Назначение платежа */
+//   purposeTitle: PurposeTitle;
+// }
+
+// interface PurposeTitle {
+//   ru: string;
+//   en: string;
+// }
 
 export interface HistoryState {
   data: History;

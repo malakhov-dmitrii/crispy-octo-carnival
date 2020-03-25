@@ -23,6 +23,8 @@ interface Filter {
 
 const History = () => {
   const zonesList = useSelector((state: Store) => state.zones.data.items);
+  const HistoryItemsTotal = useSelector((state: Store) => state.history.data.total);
+
   const dispatch = useDispatch();
   const [filter, setFilter]: [any, any] = useState({
     type: '',
@@ -56,6 +58,7 @@ const History = () => {
 
   const SelectExport = (
     <Select
+      disabled={!HistoryItemsTotal}
       value="Выгрузить"
       onChange={(format: string) =>
         dispatch({

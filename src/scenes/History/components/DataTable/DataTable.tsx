@@ -3,9 +3,9 @@ import { format } from 'date-fns';
 import { Table } from 'antd';
 
 import styles from './DataTable.module.scss';
-import { Payment } from '../../../../store/History/history.reducer';
 import { useSelector } from 'react-redux';
 import { Store } from '../../../../store';
+import { Payment } from '../../../../store/History/history.reducer';
 
 const columns = [
   {
@@ -19,7 +19,7 @@ const columns = [
     title: 'Операция',
     key: 'operations',
     render: (completed: boolean, record: Payment) => {
-      return <span key={record.id}>{record.purposeTitle.ru}</span>;
+      return <span key={record._id}>{record.purposeTitle.ru}</span>;
     },
   },
   {
