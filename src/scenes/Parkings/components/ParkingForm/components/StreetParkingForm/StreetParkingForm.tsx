@@ -76,10 +76,10 @@ const StreetParkingForm: FC = () => {
   );
 
   useEffect(() => {
-    if (Object.keys(formik.touched).length && formik.isValid) {
+    if (formik.dirty && formik.isValid) {
       handlerCheckCost();
     }
-  }, [formik.touched, formik.isValid, handlerCheckCost]);
+  }, [formik.dirty, formik.isValid, handlerCheckCost]);
 
   const selectBeforeType = (
     <Select
@@ -169,7 +169,7 @@ const StreetParkingForm: FC = () => {
         <div className={styles.ButtonBlock}>
           <Text className={styles.Sum}>{cost ? `${(cost.sum / 100).toFixed(2)} ₽` : ''}</Text>
           <Button className={styles.ConfirmButton} type={isLoading ? 'dashed' : 'primary'} htmlType="submit">
-            Создать
+            Оплатить
           </Button>
         </div>
       </div>

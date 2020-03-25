@@ -1,12 +1,11 @@
 import React from 'react';
 import { ParkingReservation } from '../../../../../../store/Parkings/parkings.reducer';
 import { format } from 'date-fns';
-import { ParkingsActions } from '../../../../../../store/Parkings/parkings.actions';
 import Button from '../../../../../../shared/components/AntOverrides/Button';
 import { timeFormat } from '../../../../../../shared/utils';
 import styles from './Columns.module.scss';
 
-export default ({ dispatch }: any) => [
+export default ({ handleStopReservation }: any) => [
   {
     title: 'Зона',
     dataIndex: 'zoneNumber',
@@ -41,17 +40,7 @@ export default ({ dispatch }: any) => [
     key: 'id',
     render: (text: string, record: ParkingReservation) => (
       <div className={styles.ButtonRow} key={record._id}>
-        <Button
-          className={styles.StopButton}
-          onClick={() => {
-            dispatch({
-              type: ParkingsActions.StopParking,
-              payload: {
-                reservationId: record._id,
-              },
-            });
-          }}
-        >
+        <Button className={styles.StopButton} onClick={() => handleStopReservation(record._id)}>
           Остановить
         </Button>
         <Button type="primary" className={styles.ProlongateButton}>
