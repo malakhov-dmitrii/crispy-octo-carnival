@@ -11,11 +11,15 @@ export interface Contact {
   phone: string;
 }
 
+export interface ContactsForEmployee {
+  phone: string;
+}
+
 export interface PaymentDetail {
   account: string;
   korAccount: string;
   bankName: string;
-  bic: string;
+  bIC: string;
 }
 
 export interface Chief {
@@ -32,12 +36,24 @@ export interface LegalEntityInfo {
   organizationType: string;
   inn: string;
   kpp: string;
-  ogrnip: string;
+  ogrn: string;
   notes: string;
   addresses: Address;
   contacts: Contact;
+  contactsForEmployees: ContactsForEmployee;
   paymentDetails: PaymentDetail;
   chief: Chief;
+}
+
+export interface ChiefRequest {
+  employeeId: string;
+  email: string;
+  fileId: string;
+  status: string;
+  requestDate: string;
+  decisionDate: string;
+  fileExtension: string;
+  fileSize: number;
 }
 
 export interface PaymentsInfo {
@@ -55,19 +71,20 @@ export interface Exported {
 }
 
 export interface OrgItem {
-  _id?: string;
-  externalId?: number;
-  accountId?: number;
-  status?: string;
-  partial?: boolean;
-  defaultLimitProfileId?: string;
-  legalEntityInfo?: LegalEntityInfo;
-  paymentsInfo?: PaymentsInfo;
-  offerInfo?: OfferInfo;
-  exported?: Exported;
-  createDate?: string;
-  updateDate?: string;
-  balance?: number;
+  _id: string;
+  externalId: number;
+  accountId: number;
+  status: string;
+  partial: boolean;
+  defaultLimitSetId: string;
+  legalEntityInfo: LegalEntityInfo;
+  chiefRequest: ChiefRequest;
+  paymentsInfo: PaymentsInfo;
+  offerInfo: OfferInfo;
+  exported: Exported;
+  createDate: string;
+  updateDate: string;
+  balance: number;
 }
 
 export interface OrgProfileState {

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { useEffect, useState, FC } from 'react';
 import styles from './Profile.module.scss';
 import cn from 'classnames';
@@ -233,7 +235,7 @@ const Profile: FC = () => {
           <div className={styles.LargeInput}>
             <label>Рассчетный счет</label>
             <Input
-              value={orgForm?.legalEntityInfo?.paymentDetails.account}
+              value={orgForm?.legalEntityInfo?.paymentDetails?.account}
               onChange={e => handleChange(e, 'legalEntityInfo.paymentDetails.account')}
             />
           </div>
@@ -243,7 +245,7 @@ const Profile: FC = () => {
           <div className={styles.LargeInput}>
             <label>БИК</label>
             <Input
-              value={orgForm?.legalEntityInfo?.paymentDetails.bic}
+              value={orgForm?.legalEntityInfo?.paymentDetails?.bIC}
               onChange={e => handleChange(e, 'legalEntityInfo.paymentDetails.bic')}
             />
           </div>
@@ -253,7 +255,7 @@ const Profile: FC = () => {
           <div className={styles.LargeInput}>
             <label>Наименование банка</label>
             <Input
-              value={orgForm?.legalEntityInfo?.paymentDetails.bankName}
+              value={orgForm?.legalEntityInfo?.paymentDetails?.bankName}
               onChange={e => handleChange(e, 'legalEntityInfo.paymentDetails.bankName')}
             />
           </div>
@@ -263,14 +265,14 @@ const Profile: FC = () => {
           <div className={styles.LargeInput}>
             <label>Корр.счет</label>
             <Input
-              value={orgForm?.legalEntityInfo?.paymentDetails.korAccount}
+              value={orgForm?.legalEntityInfo?.paymentDetails?.korAccount}
               onChange={e => handleChange(e, 'legalEntityInfo.paymentDetails.korAccount')}
             />
           </div>
         </div>
 
         <div className={styles.ActionsRow}>
-          <Button>Отмена</Button>
+          {/* <Button>Отмена</Button> */}
           <div className={styles.Gap} />
           <Button type="primary" onClick={() => submit()}>
             Сохранить
