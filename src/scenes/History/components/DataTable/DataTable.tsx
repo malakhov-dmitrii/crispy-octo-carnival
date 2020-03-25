@@ -12,7 +12,7 @@ const columns = [
     title: 'Дата',
     key: 'date',
     render: (completed: boolean, record: Payment) => {
-      return <span key={record.date}>{format(new Date(record.date).getTime(), 'MM.dd.yyyy H:m')}</span>;
+      return <span key={record.date}>{format(new Date(record.date).getTime(), 'MM.dd.yyyy HH:mm')}</span>;
     },
   },
   {
@@ -33,9 +33,9 @@ const columns = [
     title: 'Описание',
     key: 'description',
     render: (completed: boolean, record: any) => {
-      return `${record.vrp}, с ${format(new Date(record.reservationStart).getTime(), 'H:m')} до ${format(
+      return `${record.vrp}, с ${format(new Date(record.reservationStart).getTime(), 'HH:mm')} до ${format(
         new Date(record.reservationEnd).getTime(),
-        'H:m',
+        'HH:mm',
       )}`;
     },
   },
