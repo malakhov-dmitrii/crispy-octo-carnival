@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import cn from 'classnames';
 import NumberFormat from 'react-number-format';
 import { Input } from 'antd';
+import { format } from 'date-fns';
 import { useDispatch } from 'react-redux';
 
 import Modal from '../../../../../AntOverrides/ModalForm';
@@ -57,7 +58,7 @@ const MailWindow: FC<MailWindow> = ({ isOpenWindowMail, setOpenWindowMail, _id =
   const getBodyForm = ({ handleChange, values, errors }: any) => (
     <div className={cn({ [styles.HasError]: errors.email }, styles.MailWindow)}>
       <p>
-        {`№ ${_id} от ${createDate.split('T')[0]}		Пополнение баланса		`}
+        {!!createDate && `№ ${_id} от ${format(new Date(createDate).getTime(), 'MM.dd.yyyy H:m')}		Пополнение баланса		`}
         <NumberFormat
           value={(sum / 100).toFixed(2)}
           displayType={'text'}

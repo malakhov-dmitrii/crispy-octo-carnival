@@ -9,6 +9,7 @@ import Modal from '../../../../../AntOverrides/Modal';
 import { Print, PDF, Mail } from '../../../../../../Icons/NavSvg';
 import Link from '../../../../../AntOverrides/Link';
 import { ReceiptsActions } from '../../../../../../../store/Receipts/receipts.actions';
+import { format } from 'date-fns';
 
 interface SetOpen {
   (props: boolean): void;
@@ -51,7 +52,7 @@ const CheckWindow: FC<CheckWindow> = ({
   return (
     <Modal {...modalOptions} onCancel={onCancel} className={styles.CheckWindow}>
       <p>
-        {`№ ${_id} от ${createDate.split('T')[0]}		Пополнение баланса		`}
+        {!!createDate && `№ ${_id} от ${format(new Date(createDate).getTime(), 'MM.dd.yyyy H:m')}		Пополнение баланса		`}
         <NumberFormat
           value={(sum / 100).toFixed(2)}
           displayType={'text'}

@@ -6,7 +6,7 @@
     "registry": "https://npm.fabit.ru"
   },
   "homepage": "https://test.parkingtest.ru/legalcabinet",
-  "proxy": "https://parkingqa2.fitdev.ru",
+  "proxy": "https://parkingqa.fitdev.ru",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
