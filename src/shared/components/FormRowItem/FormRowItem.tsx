@@ -14,12 +14,14 @@ const FormRowItem: FC<FormRowItemProps> = ({ label, marginBottom, children, erro
     <div
       className={styles.FormRowItem}
       style={{
-        marginBottom: (isNumber(marginBottom) ? marginBottom : 16) + 'px',
+        marginBottom: (isNumber(marginBottom) ? marginBottom : 10) + 'px',
       }}
     >
       <Text className={styles.FormRowItemText}>{label}</Text>
       {children}
-      {!!error && <Text type="danger">{error}</Text>}
+      <Text type="danger" className={styles.FormRowItemError}>
+        {error}
+      </Text>
     </div>
   );
 };
