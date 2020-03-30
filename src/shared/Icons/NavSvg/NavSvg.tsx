@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
 import { IconProps } from '../../interfaces/Icons';
 
+const defaultIconsProps = {
+  size: '14',
+  fill: 'black'
+}
+
 export const Abonement: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -28,13 +29,10 @@ export const Abonement: FC<IconProps> = props => {
     </svg>
   );
 };
+Abonement.defaultProps = defaultIconsProps;
 
 export const Business: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -56,13 +54,10 @@ export const Business: FC<IconProps> = props => {
     </svg>
   );
 };
+Business.defaultProps = defaultIconsProps;
 
 export const Check: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -84,13 +79,10 @@ export const Check: FC<IconProps> = props => {
     </svg>
   );
 };
+Check.defaultProps = defaultIconsProps;
 
 export const Clone: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -112,13 +104,10 @@ export const Clone: FC<IconProps> = props => {
     </svg>
   );
 };
+Clone.defaultProps = defaultIconsProps;
 
 export const Exit: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -140,13 +129,10 @@ export const Exit: FC<IconProps> = props => {
     </svg>
   );
 };
+Exit.defaultProps = defaultIconsProps;
 
 export const History: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -168,13 +154,10 @@ export const History: FC<IconProps> = props => {
     </svg>
   );
 };
+History.defaultProps = defaultIconsProps;
 
 export const Mail: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -196,13 +179,10 @@ export const Mail: FC<IconProps> = props => {
     </svg>
   );
 };
+Mail.defaultProps = defaultIconsProps;
 
 export const More: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -230,13 +210,10 @@ export const More: FC<IconProps> = props => {
     </svg>
   );
 };
+More.defaultProps = defaultIconsProps;
 
 export const Print: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -258,13 +235,10 @@ export const Print: FC<IconProps> = props => {
     </svg>
   );
 };
+Print.defaultProps = defaultIconsProps;
 
 export const PDF: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -286,13 +260,10 @@ export const PDF: FC<IconProps> = props => {
     </svg>
   );
 };
+PDF.defaultProps = defaultIconsProps;
 
 export const Parkings: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -314,13 +285,10 @@ export const Parkings: FC<IconProps> = props => {
     </svg>
   );
 };
+Parkings.defaultProps = defaultIconsProps;
 
 export const Profile: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -342,6 +310,7 @@ export const Profile: FC<IconProps> = props => {
     </svg>
   );
 };
+Profile.defaultProps = defaultIconsProps;
 
 export const Logo: FC = () => {
   return (
@@ -372,12 +341,8 @@ export const Logo: FC = () => {
 };
 
 export const Edit: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
   const mask = 'Edit' + (props.mask || '');
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -408,14 +373,11 @@ export const Edit: FC<IconProps> = props => {
     </svg>
   );
 };
+Edit.defaultProps = defaultIconsProps;
 
 export const Delete: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const mask = 'Delete' + (props.mask || '');
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const mask = 'Delete' + (props.mask || '');  
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -446,13 +408,10 @@ export const Delete: FC<IconProps> = props => {
     </svg>
   );
 };
+Delete.defaultProps = defaultIconsProps;
 
 export const Car: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -470,13 +429,10 @@ export const Car: FC<IconProps> = props => {
     </svg>
   );
 };
+Car.defaultProps = defaultIconsProps;
 
 export const Truck: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -494,13 +450,10 @@ export const Truck: FC<IconProps> = props => {
     </svg>
   );
 };
+Truck.defaultProps = defaultIconsProps;
 
 export const Bus: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width;
-  const height = props.height;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg
@@ -519,13 +472,10 @@ export const Bus: FC<IconProps> = props => {
     </svg>
   );
 };
+Bus.defaultProps = defaultIconsProps;
 
 export const Close: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width || size;
-  const height = props.height || size;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg {...{ width, height, fill, className }} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -544,13 +494,10 @@ export const Close: FC<IconProps> = props => {
     </svg>
   );
 };
+Close.defaultProps = defaultIconsProps;
 
 export const Box: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width || size;
-  const height = props.height || size;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg {...{ width, height, fill, className }} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
@@ -565,13 +512,10 @@ export const Box: FC<IconProps> = props => {
     </svg>
   );
 };
+Box.defaultProps = defaultIconsProps;
 
 export const Reconciliation: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width || size;
-  const height = props.height || size;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg {...{ width, height, fill, className }} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
@@ -586,13 +530,10 @@ export const Reconciliation: FC<IconProps> = props => {
     </svg>
   );
 };
+Reconciliation.defaultProps = defaultIconsProps;
 
 export const Default: FC<IconProps> = props => {
-  const size = props.size || '14';
-  const fill = props.fill || 'black';
-  const className = props.className;
-  const width = props.width || size;
-  const height = props.height || size;
+  const { size, fill, className, width, height } = props;
 
   return (
     <svg {...{ width, height, fill, className }} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
@@ -607,3 +548,4 @@ export const Default: FC<IconProps> = props => {
     </svg>
   );
 };
+Default.defaultProps = defaultIconsProps;
