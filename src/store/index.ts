@@ -14,6 +14,8 @@ import config, { ConfigState } from './Config/config.reducer';
 import legalEntities, { LegalEntitiesState } from './LegalEntities/legalEntities.reducer';
 import organizationWrapper, { OrganizationWrapperState } from './OrganizationWrapper/organizationWrapper.reducer';
 import notification, { OpenNotificationState } from './Notification/notification.reducer';
+import limitSets, { LimitSetsState } from './LimitSets/limitSets.reducer';
+
 import { getHistory$, downloadHistory$ } from './History/history.effect';
 import { getZones$ } from './Zones/zones.effect';
 import { getParkings$, createParking$, stopParking$, checkCostParking$ } from './Parkings/parkings.effect';
@@ -28,6 +30,7 @@ import orgProfile, { OrgProfileState } from './OrgProfile/OrgProfile.reducer';
 import { getOrgProfile$ } from './OrgProfile/OrgProfile.effect';
 import { createCheck$ } from './OrganizationWrapper/organizationWrapper.effect';
 import { pushNotification$, shiftNotification$ } from './Notification/notification.effect';
+import { getLimitSetsActions$ } from './LimitSets/limitSets.effect';
 
 export interface Store {
   config: ConfigState;
@@ -43,6 +46,7 @@ export interface Store {
   receipts: ReceiptsState;
   organizationWrapper: OrganizationWrapperState;
   notification: OpenNotificationState;
+  limitSets: LimitSetsState;
 }
 
 const observableMiddleware = createEpicMiddleware();
@@ -61,6 +65,7 @@ const reducers = combineReducers({
   receipts,
   organizationWrapper,
   notification,
+  limitSets,
 });
 
 export const store = createStore(reducers, composeWithDevTools(applyMiddleware(observableMiddleware)));
@@ -92,5 +97,6 @@ observableMiddleware.run(
     createChiefRequest$,
     pushNotification$,
     shiftNotification$,
+    getLimitSetsActions$,
   ),
 );

@@ -7,7 +7,6 @@ import { ConfigActions } from '../../store/Config/config.actions';
 import { LegalEntitiesActions } from '../../store/LegalEntities/legalEntities.actions';
 import CompanySelect from './components/CompanySelect';
 import { Card } from 'antd';
-import { Link } from 'react-router-dom';
 import { useLocalAuth } from '../../shared/utils';
 import { env } from '../../App';
 

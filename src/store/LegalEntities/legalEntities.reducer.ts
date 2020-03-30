@@ -32,6 +32,7 @@ export interface LegalEntityItem {
   validityInfo: ValidityInfo;
   legalEntityInfo: LegalEntityInfo;
   status: string;
+  defaultLimitSetId: string;
 }
 
 export interface LegalEntitiesState {

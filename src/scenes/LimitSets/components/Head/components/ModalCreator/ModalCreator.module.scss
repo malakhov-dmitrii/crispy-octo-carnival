@@ -1,0 +1,11 @@
+.ModalCreator {
+  .Footer {
+    display: flex;
+    flex-wrap: wrap;
+    :global {
+      .ant-btn {
+        width: 100%;
+      }
+    }
+  }
+}
