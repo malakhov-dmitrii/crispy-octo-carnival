@@ -19,6 +19,7 @@ import {
   Close,
   Box,
   Reconciliation,
+  Default,
 } from './NavSvg';
 
 export {
@@ -42,4 +43,5 @@ export {
   Close,
   Box,
   Reconciliation,
+  Default,
 };

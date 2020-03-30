@@ -8,6 +8,7 @@ import Profile from './scenes/Profile';
 import Connect from './scenes/Connect';
 import PenaltiesAndEvacuations from './scenes/PenaltiesAndEvacuations';
 import Reconciliation from './scenes/Reconciliation';
+import LimitSets from './scenes/LimitSets';
 
 interface Route {
   id: number;
@@ -92,6 +93,14 @@ const routes: Route[] = [
     path: 'penalties-and-evacuations',
     title: 'Штрафы и эвакуации',
     children: PenaltiesAndEvacuations,
+    useWith: ['organization', 'sidebar', 'header'],
+    icon: 'box',
+  },
+  {
+    id: 15,
+    path: 'limit-sets',
+    title: 'Ограничения',
+    children: LimitSets,
     useWith: ['organization', 'sidebar', 'header'],
     icon: 'box',
   },

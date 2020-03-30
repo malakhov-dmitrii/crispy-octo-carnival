@@ -1,0 +1,14 @@
+.Head {
+  .FlexGrowOne {
+    flex-grow: 1;
+  }
+  .Button {
+    display: flex;
+    align-items: center;
+    width: 170px;
+    height: 40px;
+  }
+  .ButtonIcon {
+    margin-right: 8px;
+  }
+}

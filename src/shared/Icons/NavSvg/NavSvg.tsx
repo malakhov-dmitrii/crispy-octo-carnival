@@ -586,3 +586,24 @@ export const Reconciliation: FC<IconProps> = props => {
     </svg>
   );
 };
+
+export const Default: FC<IconProps> = props => {
+  const size = props.size || '14';
+  const fill = props.fill || 'black';
+  const className = props.className;
+  const width = props.width || size;
+  const height = props.height || size;
+
+  return (
+    <svg {...{ width, height, fill, className }} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.65">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M9.73438 3.5H12.1406C12.6848 3.5 13.125 3.94023 13.125 4.48437V9.40625C13.125 9.95039 12.6848 10.3906 12.1406 10.3906H9.73438C9.19023 10.3906 8.75 9.95039 8.75 9.40625V8.64062H3.82812V12.1406C3.82812 12.6848 3.38789 13.125 2.84375 13.125H1.85937C1.31523 13.125 0.875 12.6848 0.875 12.1406V1.85937C0.875 1.31523 1.31523 0.875 1.85937 0.875H2.84375C3.35098 0.875 3.76797 1.25781 3.82266 1.75H8.75C9.29414 1.75 9.73438 2.19023 9.73438 2.73437V3.5ZM1.85938 12.1406H2.84375V1.85938H1.85938V12.1406ZM8.75 7.65625H3.82812V2.73438H8.75V7.65625ZM9.73438 9.40625H12.1406V4.48438H9.73438V9.40625Z"
+          fill={fill}
+        />
+      </g>
+    </svg>
+  );
+};
